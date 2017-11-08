@@ -1,0 +1,231 @@
+.Empatt
+    dashconterller(v-show='p', v-bind:save='true',v-bind:heading="nextactivity",v-bind:searchbar='true',v-bind:dropdownbtn1='true',v-bind:dropdownbtn2='true',v-bind:dropdownbtn3='true', v-bind:links="btnlinks",v-bind:num1='true',v-bind:num2='true',v-bind:paginbtn1='true',v-bind:paginbtn2='true')
+
+    .row
+        .col-sm-12
+            .time
+                p#demo(style='float:right;font-weight:bold;background-color: beige;' v-show='l')
+    .row(style='padding-top: 17px;' v-show='r')
+        .col-md-3(style='padding-right: 0px;')
+            router-link(to='Checkin')
+                .table(style='margin-top:-10px;color: black;')
+                        .row
+                            .col-xs-3
+                                .img
+                                    img.img-responsive(style='width:80px;padding-left: 10px;')(src='/images/g.jpg')
+
+                            .col-xs-5.offset-sm-1
+                                strong
+                                    | John Doe
+
+                                br(style='font-size:10px;')
+                                | Web Devloper
+                                br(style='font-size:10px;')
+                                | 14 Street Newyork
+                            .col-xs-1.offset-sm-3
+                                i.a.fa.fa-user-o(style='color:Green;')
+
+            router-link(to='CheckOut')
+                .table(style='margin-top:-10px;color: black;' )
+                        .row
+                            .col-xs-3
+                                .img
+                                    img.img-responsive(style='width:80px;padding-left: 10px;')(src='/images/g.jpg')
+
+                            .col-xs-5.offset-sm-1
+                                strong
+                                    | John Doe
+
+                                br(style='font-size:10px;')
+                                | Web Devloper
+                                br(style='font-size:10px;')
+                                | 14 Street Newyork
+                            .col-xs-1.offset-sm-3
+                                i.a.fa.fa-user-o(style='color:Red;')
+
+            router-link(to='PassPad')
+                .table(style='margin-top:-10px;color: black;')
+                    .row
+                        .col-xs-3
+                            .img
+                                img.img-responsive(style='width:80px;padding-left: 10px;')(src='/images/g.jpg')
+
+                        .col-xs-5.offset-sm-1
+                            strong
+                                | John Doe
+
+                            br(style='font-size:10px;')
+                            | Web Devloper
+                            br(style='font-size:10px;')
+                            | 14 Street Newyork
+                        .col-xs-1.offset-sm-3
+                            i.a.fa.fa-user-o(style='color:Red;')
+
+
+    .center
+        .main(style='' v-show='v')
+            .test(style='flex: 0 0 auto;width: 550px;display: inline-block;border-radius: 10px;background-color: rgba(255, 255, 255, 0.8);box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);font-size: 1.2em;padding: 3')
+                .row
+                    .col-sm-12
+                        .center
+                            h1(style='font-size: 27px;') Welcome to John Doe
+
+
+                .row
+                    .col-sm-12
+                        .center
+                            h2(style='font-size: 19px;') Check In
+                .row
+                    .col-sm-12
+                        .center
+                            i.fa.fa-sign-in.btn-primary.icon(v-on:click='v=false,t=true')
+
+    .row
+        .col-md-12
+            .center
+                .main(style='' v-show='t')
+                    .test(style='flex: 0 0 auto;width: 550px;border-radius: 10px;display: inline-block;' +
+                    'background-color: rgba(255, 255, 255, 0.8);box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);font-size: 1.2em;padding: 3')
+                        .row
+                            .col-sm-12
+                                .center
+                                    h1(style='font-size: 27px;color: green;') Checked in at 13:11:08
+
+
+                        .row
+                            .col-sm-12
+                                .center
+                                    h2(style='font-size: 19px;') Welcome João Gomer
+                        .row
+                            .col-sm-12
+                                .center
+                                    h2(style='font-size: 19px;')  Good afternoon
+
+                        .row
+                            .col-sm-12
+                                .center
+                                    router-link(to='Mode')
+                                        button.btn.btn-primary.c( type='button') Ok
+
+
+    .main(style='' v-show='u')
+        .center
+            .test(style='flex: 0 0 auto;width: 550px;border-radius: 10px;display: inline-block;background-color: rgba(255, 255, 255, 0.8);box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);font-size: 1.2em;')
+                .row
+                    .col-sm-12
+                        .center
+                            h1(style='font-size: 27px;') Welcome to John Doe
+
+
+                .row
+                    .col-sm-12
+                        .center
+                            h2(style='font-size: 19px;') Check Out
+                .row
+                    .col-sm-12
+                        .center
+                            i.fa.fa-sign-in.btn-primary.icon(v-on:click='u=false,f=true')
+
+
+
+    .row
+        .col-md-12
+            .center
+                .main(style='' v-show='f')
+                    .test(style='flex: 0 0 auto;width: 550px;border-radius: 10px;background-color: rgba(255, 255, 255, 0.8);display: inline-block;box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);font-size: 1.2em;')
+                        .row
+                            .col-sm-12
+                                .center
+                                    h1(style='font-size: 27px;color: green;') Checked out at 14:03:38
+
+
+                        .row
+                            .col-sm-12
+                                .center
+                                    h2(style='font-size: 19px;') Goodbye Juan Gomez
+
+                        .row
+                            .col-sm-12
+                                .center
+                                    h2(style='font-size: 19px;')  Have a good afternoon Good afternoon
+
+                        .row
+                            .col-sm-12
+                                .center
+                                    h1(style='font-size: 20px;color: Orange;') Warning! Last check in was over 12 hours ago.
+                                        | If this isn't right, please contact Human Resources.
+
+                        .row
+                            .col-sm-12
+                                .center
+                                    router-link(to='Mode')
+                                        button.btn.btn-primary.c( type='button') Ok
+
+
+
+
+
+    .main(style='' v-show='y')
+        .center
+            .row
+                .col-sm-8
+                    router-link(to='Mode')
+                        .center
+                            .btn-danger.fa.fa-times(style='display: inline-block;padding-top: 15px;')
+            .test(style='flex: 0 0 auto;width: 550px;display: inline-block;border-radius: 10px;background-color: rgba(255, 255, 255, 0.8);box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);font-size: 1.2em;padding: 3')
+
+
+                .row
+                    .col-sm-12
+                        .center
+                            h1(style='font-size: 24px;') Welcome Hans Anders
+
+
+                .row
+                    .col-sm-12
+                        .center
+                            h2(style='font-size: 22px;') Please enter your PIN to check in
+                .row(style='margin-left:50px;')
+                    .col-sm-12
+                            form(name='calc')
+                                table#calc
+                                    tr(style='border:none;')
+                                        td(colspan='5')
+                                            input.btns(name='display',style='width:30%;border-radius: 6px;' onkeypress='return event.charCode >= 48 && event.charCode <= 57', type='Password')
+                                        td(style='display:none')
+                                            input( name='M', type='number')
+                                    tr(style='border:none;')
+
+                                        td
+                                            input.btn(type='button', value='0', onclick="calc.display.value+='0'")
+                                        td
+                                            input.btn(type='button', value='1', onclick="calc.display.value+='1'")
+                                        td
+                                            input.btn(type='button', value='2', onclick="calc.display.value+='2'")
+
+                                    tr(style='border:none;')
+
+                                        td
+                                            input.btn(type='button', value='3', onclick="calc.display.value+='3'")
+                                        td
+                                            input.btn(type='button', value='4', onclick="calc.display.value+='4'")
+                                        td
+                                            input.btn(type='button', value='5', onclick="calc.display.value+='5'")
+
+                                    tr(style='border:none;')
+
+                                        td
+                                            input.btn(type='button', value='6', onclick="calc.display.value+='6'")
+                                        td
+                                            input.btn(type='button', value='7', onclick="calc.display.value+='7'")
+                                        td
+                                            input.btn(type='button', value='8', onclick="calc.display.value+='8'")
+
+                                    tr(style='border:none;')
+
+                                        td
+                                            input.btn(type='button', value='9', onclick="calc.display.value+='9'")
+                                        td
+                                            input.btn(type='button', value='C', onclick="calc.display.value=''")
+                                        td
+                                            input.btn(type='button', value='Ok', onclick='calc.display.value=eval(calc.display.value)')
